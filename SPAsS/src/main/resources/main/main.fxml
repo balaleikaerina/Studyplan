@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="935.0" prefHeight="900.0" prefWidth="1763.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="38.0" prefHeight="81.0" prefWidth="115.0" styleClass="logoSmall" stylesheets="@../libs/css/application.css">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="84.0" layoutX="11.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../libs/images/logoKlein.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="115.0" layoutY="46.0" prefHeight="71.0" prefWidth="1581.0" styleClass="topBar" stylesheets="@../libs/css/application.css">
+         <children>
+            <AnchorPane prefHeight="81.0" prefWidth="1581.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="969.0">
+                     <children>
+                        <Label fx:id="userStudienplanLabel" prefHeight="24.0" text="Helena's Studienplan">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Droid Sans" size="19.0" />
+                           </font>
+                        </Label>
+                        <HBox fillHeight="false" maxHeight="40.0" prefHeight="40.0" styleClass="topMenuButtonMenu">
+                           <children>
+                              <Button mnemonicParsing="false" styleClass="topMenuButtonActive" text="Plan anzeigen">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="251.0" styleClass="topMenuButton" text="Durchschnittsnote" />
+                              <Button fx:id="durchschnittsNote" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="129.0" styleClass="topMenuButton" text="0.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="1380.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="201.0">
+                     <children>
+                        <Button fx:id="print" layoutX="103.0" layoutY="15.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="54.0" styleClass="transparentButton">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../libs/images/printIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="saveStudienplan" mnemonicParsing="false" prefHeight="61.0" prefWidth="54.0" styleClass="transparentButton">
+                           <graphic>
+                              <ImageView fx:id="saveIcon" fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../libs/images/saveIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="settingsButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="54.0" styleClass="transparentButton">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../libs/images/settingsIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children></Pane>
+      <Pane fx:id="topBar" layoutY="164.0" prefHeight="772.0" prefWidth="84.0" styleClass="sidePane" stylesheets="@../libs/css/application.css">
+         <children>
+            <VBox prefHeight="788.0" prefWidth="84.0">
+               <children>
+                  <Button fx:id="moduleAddButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="89.0" styleClass="transparentButton" stylesheets="@../libs/css/application.css">
+                     <graphic>
+                        <ImageView fx:id="moduleAddIcon" fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../libs/images/addModules.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="semesterAddButton" mnemonicParsing="false" prefHeight="71.0" prefWidth="89.0" styleClass="transparentButton" stylesheets="@../libs/css/application.css">
+                     <graphic>
+                        <ImageView fx:id="semesterAddIcon" fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../libs/images/listAdd.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="semesterRemoveButton" layoutX="10.0" layoutY="81.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="89.0" styleClass="transparentButton" stylesheets="@../libs/css/application.css">
+                     <graphic>
+                        <ImageView fx:id="semesterRemoveButtonIcon" fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../libs/images/listRemove.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children></Pane>
+      <Pane fx:id="stundenPlanAnsicht" layoutX="128.0" layoutY="162.0" prefHeight="772.0" prefWidth="1569.0" styleClass="mainPane" stylesheets="@../libs/css/application.css">
+         <children>
+            <VBox id="mainContainer" fx:id="studViewVBox" alignment="CENTER" prefHeight="772.0" prefWidth="1569.0" stylesheets="@../libs/css/application.css">
+               <children>
+                  <Label text="Semester">
+                     <font>
+                        <Font name="Droid Sans" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <ListView fx:id="semesterListView" prefHeight="742.0" prefWidth="1549.0" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children></Pane>
+       <Pane fx:id="modulAnsicht" layoutX="127.0" prefHeight="379.0" prefWidth="1626.0" visible="false">
+           
+       </Pane>
+      <BorderPane fx:id="popUpBackground" disable="true" prefHeight="946.0" prefWidth="1763.0" style="-fx-background-color: #0000007a;" visible="false">
+         <center>
+            <Pane fx:id="settingsPane" disable="true" maxHeight="600.0" maxWidth="600.0" style="-fx-background-color: #f6f5fa; -fx-border-radius: 20; -fx-background-radius: 20;" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="settingsInputPain" layoutX="25.0" layoutY="64.0" prefHeight="455.0" prefWidth="549.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                  <Label layoutX="243.0" layoutY="20.0" text="Einstellungen">
+                     <font>
+                        <Font name="Droid Sans" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="settingSaveButton" layoutX="252.0" layoutY="539.0" mnemonicParsing="false" styleClass="buttonNormal" stylesheets="@../libs/css/application.css" text="Speichern">
+                     <font>
+                        <Font name="Droid Sans" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </center></BorderPane>
+      <BorderPane fx:id="editPaneBackground" disable="true" prefHeight="946.0" prefWidth="1763.0" style="-fx-background-color: #0000007a;" visible="false">
+         <center>
+            <Pane fx:id="editModulePane" disable="true" maxHeight="600.0" maxWidth="600.0" style="-fx-background-color: #f6f5fa; -fx-border-radius: 20; -fx-background-radius: 20;" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="settingsInputPain1" layoutX="25.0" layoutY="64.0" prefHeight="455.0" prefWidth="549.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+                  <Label layoutX="230.0" layoutY="23.0" text="Modul editieren">
+                     <font>
+                        <Font name="Droid Sans" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="editModuleSaveButton" layoutX="252.0" layoutY="539.0" mnemonicParsing="false" styleClass="buttonNormal" stylesheets="@../libs/css/application.css" text="Speichern">
+                     <font>
+                        <Font name="Droid Sans" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="errorPaneBackground" disable="true" prefHeight="946.0" prefWidth="1763.0" style="-fx-background-color: #0000007a;" visible="false">
+         <center>
+            <VBox fx:id="errorModulePane" disable="true" maxHeight="600.0" maxWidth="600.0" style="-fx-background-color: #f6f5fa; -fx-border-radius: 20; -fx-background-radius: 20;" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="230.0" layoutY="23.0" prefHeight="97.0" prefWidth="600.0" text="Fehler" textAlignment="CENTER" textFill="#c90f0f">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorMsgLabel" alignment="CENTER" layoutX="230.0" layoutY="23.0" prefHeight="442.0" prefWidth="601.0" text="Fehler_Text" wrapText="true">
+                     <font>
+                        <Font name="Droid Sans" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="errorOkayButton" alignment="CENTER" layoutX="252.0" layoutY="539.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="167.0" styleClass="buttonNormal" stylesheets="@../libs/css/application.css" text="OKAY">
+                     <font>
+                        <Font name="Droid Sans" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

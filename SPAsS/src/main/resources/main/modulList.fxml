@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="392.0" prefWidth="1569.0" style="-fx-background-color: #f6f5fa; -fx-background-radius: 0 0 20 20;" stylesheets="@../libs/css/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutX="20.0" layoutY="62.0" prefHeight="305.0" prefWidth="1524.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <content>
+            <FlowPane fx:id="flowPane" hgap="10.0" prefHeight="304.0" prefWidth="1506.0" styleClass="flowPaneModule" stylesheets="@../libs/css/application.css" vgap="10.0">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+      <HBox fx:id="filterHBox" layoutX="20.0" layoutY="12.0" prefHeight="40.0" prefWidth="226.0" style="-fx-background-radius: 20;">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="44.0" style="-fx-background-color: white; -fx-background-radius: 10 0 0 10;">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../libs/images/searchIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="250.0" layoutY="12.0" prefHeight="40.0" prefWidth="470.0">
+         <children>
+            <MenuButton fx:id="filterTyp" graphicTextGap="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="145.0" styleClass="inputFeldoben" text="Modultyp">
+              <items>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Informatik">
+                    <content>
+                      <CheckBox fx:id="filterInformatik" text="Informatik" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Gestaltung">
+                    <content>
+                      <CheckBox fx:id="filterGestaltung" text="Gestaltung" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Mathematik">
+                    <content>
+                      <CheckBox fx:id="filterMathematik" text="Mathematik" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Fachübergreifend">
+                    <content>
+                      <CheckBox fx:id="filterFachuebergreifend" text="Fachübergreifend" />
+                    </content>
+                  </CustomMenuItem>
+              </items>
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </MenuButton>
+            <MenuButton fx:id="filterFS" mnemonicParsing="false" prefHeight="40.0" styleClass="inputFeldoben" text="Fachsemester">
+              <items>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS1" text="1" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS2" text="2" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS3" text="3" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS4" text="4" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS5" text="5" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS6" text="6" />
+                    </content>
+                  </CustomMenuItem>
+                  <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                    <content>
+                      <CheckBox fx:id="filterFS7" text="7" />
+                    </content>
+                  </CustomMenuItem>
+              </items>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </MenuButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

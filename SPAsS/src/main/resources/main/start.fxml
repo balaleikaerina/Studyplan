@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@../libs/css/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.StartUI">
+   <children>
+      <ImageView fitHeight="113.0" fitWidth="155.0" layoutX="144.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../libs/images/logoKlein.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="studAuswaehlen" layoutX="13.0" layoutY="165.0" prefHeight="419.0" prefWidth="372.0" style="-fx-background-color: #f6f5fa; -fx-background-radius: 20;">
+         <children>
+            <ListView fx:id="planListView" layoutX="35.0" layoutY="54.0" prefHeight="274.0" prefWidth="302.0" styleClass="semester-list-view" stylesheets="@../libs/css/application.css" />
+            <Button fx:id="createPlanBtn" layoutX="37.0" layoutY="339.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="302.0" styleClass="buttonNormal" text="Studienplan Erstellen">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="92.0" layoutY="17.0" text="Studienplan auswählen">
+               <font>
+                  <Font name="Droid Sans" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="studErstellen" layoutX="13.0" layoutY="165.0" prefHeight="419.0" prefWidth="372.0" style="-fx-background-color: #f6f5fa; -fx-background-radius: 20;">
+         <children>
+            <VBox layoutX="35.0" layoutY="54.0" prefHeight="256.0" prefWidth="302.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="202.0" text="Dein Name">
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Droid Sans" size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="nameInput" styleClass="inputFeld">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label layoutX="30.0" layoutY="20.0" prefHeight="37.0" prefWidth="262.0" text="Dein Studiengang">
+                     <font>
+                        <Font name="Droid Sans" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="studChoiceBox" prefHeight="44.0" prefWidth="262.0" styleClass="inputFeld">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <Button fx:id="createPlanWeiter" layoutX="37.0" layoutY="330.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="302.0" styleClass="buttonNormal" text="Weiter">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutY="16.0" prefHeight="21.0" prefWidth="372.0" text="Studienplan erstellen" textAlignment="CENTER">
+               <font>
+                  <Font name="Droid Sans" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

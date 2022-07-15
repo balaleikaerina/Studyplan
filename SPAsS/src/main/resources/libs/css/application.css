@@ -1,0 +1,295 @@
+.flowPaneModule {
+    -fx-background-color: white;
+    -fx-text-fill: #000000;
+    -fx-border-style: hidden hidden hidden hidden;
+    -fx-background-radius: 20 0 20 20;
+}
+
+/* top | right | bottom | left */
+
+.mainPane {
+    -fx-border-radius: 30 30 0 0;
+    -fx-background-radius: 30 30 0 0;
+    -fx-background-color: #f6f5fa;
+}
+
+.sidePane {
+    -fx-border-style: hidden hidden hidden hidden;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-background-color: #8338ec;
+    -fx-border-radius: 0 30 0 0;
+    -fx-background-radius: 0 30 0 0;
+}
+
+.topBar {
+
+}
+
+.logoSmall {
+
+}
+
+.searchField {
+    -fx-min-height: 40;
+    -fx-border-width: 0;
+    -fx-background-radius: 0 10 10 0;
+    -fx-background-color: white;
+}
+
+.topMenuButton {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-background-color: #f6f5fa;
+    -fx-text-fill: #8c8c8c;
+    -fx-min-height: 40;
+}
+
+.buttonNormal {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-background-color: #8338ec;
+    -fx-text-fill: white;
+    -fx-min-height: 40;
+}
+
+.topMenuButtonActive {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-background-color: #8338ec;
+    -fx-text-fill: white;
+    -fx-min-height: 40;
+}
+
+.inputFeld {
+    -fx-border-radius: 10;
+    -fx-min-height: 30;
+    -fx-background-color: #f6f5fa;
+    -fx-border-color: #f6f5fa;
+    -fx-border-width: 10;
+    -fx-background-radius: 10;
+}
+
+.inputFeld2 {
+    -fx-border-radius: 10;
+    -fx-min-height: 30;
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-width: 10;
+    -fx-background-radius: 10;
+}
+
+.inputFeldoben {
+    -fx-border-radius: 10;
+    -fx-min-height: 30;
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-background-radius: 10;
+}
+
+.settingsLabel {
+    -fx-text-fill: #7a7a7a;
+    -fx-font-size: 16;
+    -fx-padding: 10 0 10 0;
+}
+
+.topMenuButtonMenu {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: #f6f5fa;
+    -fx-min-height: 40;
+}
+
+
+.transparentButton {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+}
+
+.modulBox1 {
+    -fx-border-width: 3;
+    -fx-border-color: #fb5607;
+    -fx-border-radius: 10;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-background-color: #f6f5fa;
+    -fx-background-radius: 10;
+    -fx-text-fill: #000000;
+    -fx-min-width: 200px;
+    -fx-min-height: 70px;
+    -fx-start-margin: 20px;
+}
+
+.modulBox2 {
+    -fx-border-width: 3;
+    -fx-border-color: #3a86ff;
+    -fx-border-radius: 10;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-background-color: #f6f5fa;
+    -fx-background-radius: 10;
+    -fx-text-fill: #000000;
+    -fx-min-width: 200px;
+    -fx-min-height: 70px;
+    -fx-start-margin: 20px;
+}
+
+.modulBox3 {
+    -fx-border-width: 3;
+    -fx-border-color: #ffbe0b;
+    -fx-border-radius: 10;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-background-color: #f6f5fa;
+    -fx-background-radius: 10;
+    -fx-text-fill: #000000;
+    -fx-min-width: 200px;
+    -fx-min-height: 70px;
+    -fx-start-margin: 20px;
+}
+.modulBox4 {
+    -fx-border-width: 3;
+    -fx-border-color: #8338ec;
+    -fx-border-radius: 10;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-background-color: #f6f5fa;
+    -fx-background-radius: 10;
+    -fx-text-fill: #000000;
+    -fx-min-width: 200px;
+    -fx-min-height: 70px;
+    -fx-start-margin: 20px;
+}
+
+
+.modulBoxH1 {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1f1f1f;
+
+}
+
+
+.check-box .box {
+
+    -fx-font-size: 14px;
+    -fx-background-color: #e5e5e5;
+    -fx-border-color: rgba(131, 56, 236, 0.33);
+    -fx-border-radius:1px;
+
+}
+
+.check-box:selected .mark {
+
+    -fx-background-color: white;
+
+}
+
+.check-box:selected .box {
+
+    -fx-background-color: #8338ec;
+}
+
+/* top | right | bottom | left */
+
+.list-hbox-background {
+    -fx-background-color: #ff006e;
+    -fx-text-fill: white;
+    -fx-border-radius: 10 0 0 10;
+    -fx-background-radius: 10 0 0 10;
+
+}
+
+
+.semester-zahl {
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+.semester-list-view {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-font-size: 20;
+}
+
+.mainContainer {
+    -fx-padding: 10 5 5 3;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-background-color: #f6f5fa;
+}
+
+.semester-list-view-main {
+    -fx-padding: 10 5 5 3;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-background-color: white;
+}
+
+.settings-label-name {
+    -fx-min-width: 490;
+    -fx-font-size:67;
+    -fx-padding: 10;
+}
+
+.settings-vbox {
+    -fx-pref-width: 500;
+    -fx-min-width: 500;
+}
+
+.settings-text-field-name {
+    -fx-pref-width: 500;
+    -fx-min-width: 500;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: transparent;
+
+}
+.list-view .list-cell:odd {
+    -fx-background-color: transparent;
+}
+
+.modul-add-to-modul-list-opened {
+    -fx-background-color: #eaeaea;
+}
+
+
+
+.scroll-pane {
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #b0b0b0;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: white;
+}
+

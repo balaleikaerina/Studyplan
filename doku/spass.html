@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPAsS</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; height: 0; }
+[hidden] { display: none; }
+html { background: #fff; color: #000; font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+body { margin: 0; text-rendering: geometricPrecision;
+-webkit-font-smoothing: antialiased; }
+a:focus { outline: thin dotted; }
+a:active, a:hover { outline: 0; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+mark { background: #ff0; color: #000; }
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+pre { white-space: pre-wrap; }
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+legend { border: 0; padding: 0; }
+button, input, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
+button, input { line-height: normal; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+table { border-collapse: collapse; border-spacing: 0; }
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html, body { font-size: 100%; }
+body { background: white; color: #222222; padding: 0; margin: 0; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: auto; }
+a:hover { cursor: pointer; }
+a:focus { outline: none; }
+img, object, embed { max-width: 100%; height: auto; }
+object, embed { height: 100%; }
+img { -ms-interpolation-mode: bicubic; }
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object { max-width: none !important; }
+.left { float: left !important; }
+.right { float: right !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+.text-justify { text-align: justify !important; }
+.hide { display: none; }
+.antialiased, body { -webkit-font-smoothing: antialiased; }
+img { display: inline-block; vertical-align: middle; }
+textarea { height: auto; min-height: 50px; }
+select { width: 100%; }
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { font-size: 1.21875em; line-height: 1.6; }
+.subheader, #content #toctitle, .admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title, .tableblock > caption { line-height: 1.4; color: #7a2518; font-weight: 300; margin-top: 0.2em; margin-bottom: 0.5em; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; direction: ltr; }
+a { color: inherit; line-height: inherit; text-decoration: inherit; }
+a:hover, a:focus { color: #00467f; }
+a img { border: none; }
+p { font-family: inherit; font-weight: normal; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; text-rendering: optimizeLegibility; }
+p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; color: #6c4d9a; text-rendering: optimizeLegibility; margin-top: 1em; margin-bottom: 0.5em; line-height: 1.2125em; }
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small { font-size: 60%; color: #e99b8f; line-height: 0; }
+h1 { font-size: 2.125em; }
+h2 { font-size: 1.6875em; }
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1.125em; }
+h6 { font-size: 1em; }
+hr { border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25em 0 1.1875em; height: 0; }
+em, i { font-style: italic; line-height: inherit; }
+strong, b { font-weight: bold; line-height: inherit; }
+small { font-size: 60%; line-height: inherit; }
+code { font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; color: #6d180b; }
+ul, ol, dl { font-size: 1em; line-height: 2; margin-bottom: 1.25em; list-style-position: outside; font-family: inherit; }
+ul, ol { margin-left: 1.5em; }
+ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+ul.square { list-style-type: square; }
+ul.circle { list-style-type: circle; }
+ul.disc { list-style-type: disc; }
+ul.no-bullet { list-style: none; }
+ol li ul, ol li ol { margin-left: 1.25em; margin-bottom: 0; }
+dl dt { margin-bottom: 0.3125em; font-weight: bold; }
+dl dd { margin-bottom: 1.25em; }
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222222; border-bottom: 1px dotted #dddddd; cursor: help; }
+abbr { text-transform: none; }
+blockquote { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+blockquote cite { display: block; font-size: inherit; color: #555555; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #555555; }
+blockquote, blockquote p { line-height: 1.6; color: #6f6f6f; }
+.vcard { display: inline-block; margin: 0 0 1.25em 0; border: 1px solid #dddddd; padding: 0.625em 0.75em; }
+.vcard li { margin: 0; display: block; }
+.vcard .fn { font-weight: bold; font-size: 0.9375em; }
+.vevent .summary { font-weight: bold; }
+.vevent abbr { cursor: auto; text-decoration: none; font-weight: bold; border: none; padding: 0 0.0625em; }
+@media only screen and (min-width: 768px) { h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.4; }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2.3125em; }
+  h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.6875em; }
+  h4 { font-size: 1.4375em; } }
+.print-only { display: none !important; }
+@media print { * { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3, #toctitle, .sidebarblock > .content > .title { orphans: 3; widows: 3; }
+  h2, h3, #toctitle, .sidebarblock > .content > .title { page-break-after: avoid; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+  .hide-for-print { display: none !important; }
+  .show-for-print { display: inherit !important; } }
+table { background: white; margin-bottom: 1.25em; border: solid 1px #dddddd; }
+table thead, table tfoot { background: whitesmoke; font-weight: bold; }
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0.5em 0.625em 0.625em; font-size: inherit; color: #222222; text-align: left; }
+table tr th, table tr td { padding: 0.5625em 0.625em; font-size: inherit; color: #222222; }
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f9f9f9; }
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.6; }
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after { content: " "; display: table; }
+.clearfix:after, .float-group:after { clear: both; }
+*:not(pre) > code { font-size: 0.9375em; padding: 1px 3px 0; white-space: nowrap; background-color: #f2f2f2; border: 1px solid #cccccc; -webkit-border-radius: 4px; border-radius: 4px; text-shadow: none; }
+pre, pre > code { line-height: 1.4; color: inherit; font-family: Consolas, "Liberation Mono", Courier, monospace; font-weight: normal; }
+kbd.keyseq { color: #555555; }
+kbd:not(.keyseq) { display: inline-block; color: #222222; font-size: 0.75em; line-height: 1.4; background-color: #F7F7F7; border: 1px solid #ccc; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset; margin: -0.15em 0.15em 0 0.15em; padding: 0.2em 0.6em 0.2em 0.5em; vertical-align: middle; white-space: nowrap; }
+kbd kbd:first-child { margin-left: 0; }
+kbd kbd:last-child { margin-right: 0; }
+.menuseq, .menu { color: #090909; }
+p a > code:hover { color: #561309; }
+#header, #content, #footnotes, #footer { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 62.5em; *zoom: 1; position: relative; padding-left: 0.9375em; padding-right: 0.9375em; }
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
+#header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
+#header { margin-bottom: 2.5em; }
+#header > h1 { color: black; font-weight: normal; border-bottom: 1px solid #dddddd; margin-bottom: -28px; padding-bottom: 32px; }
+#header span { color: #6f6f6f; }
+#header #revnumber { text-transform: capitalize; }
+#header br { display: none; }
+#header br + span { padding-left: 3px; }
+#header br + span:before { content: "\2013 \0020"; }
+#header br + span.author { padding-left: 0; }
+#header br + span.author:before { content: ", "; }
+#toc { border-bottom: 3px double #ebebeb; padding-bottom: 1.25em; }
+#toc > ul { margin-left: 0.25em; }
+#toc ul.sectlevel0 > li > a { font-style: italic; }
+#toc ul.sectlevel0 ul.sectlevel1 { margin-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+#toc ul { list-style-type: none; }
+#toctitle {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+@media only screen and (min-width: 1280px) { body.toc2 { padding-left: 20em; }
+  #toc.toc2 { position: fixed; width: 20em; left: 0; top: 0; border-right: solid 1px #f2f1f1; border-bottom: 0; z-index: 1000; padding: 1em; height: 100%; overflow: auto; }
+  #toc.toc2 #toctitle { margin-top: 0; }
+  #toc.toc2 > ul {
+  font-size: 17px;
+  color: black;
+}
+  #toc.toc2 ul ul { margin-left: 0; padding-left: 1.25em; }
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 { padding-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 20em; }
+  body.toc2.toc-right #toc.toc2 { border-right: 0; border-left: 1px solid #ebebeb; left: auto; right: 0; } }
+#content #toc { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; border-width: 0; -webkit-border-radius: 4px; border-radius: 4px; }
+#content #toc > :first-child { margin-top: 0; }
+#content #toc > :last-child { margin-bottom: 0; }
+#content #toc a { text-decoration: none; }
+#content #toctitle { font-weight: bold; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 1em; padding-left: 0.125em; }
+#footer { max-width: 100%; background-color: #222222; padding: 1.25em; }
+#footer-text { color: #dddddd; line-height: 1.44; }
+.sect1 { padding-bottom: 1.25em; }
+.sect1 + .sect1 { border-top: 3px double #ebebeb; }
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor { position: absolute; width: 1em; margin-left: -1em; display: block; text-decoration: none; visibility: hidden; text-align: center; font-weight: normal; }
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before { content: '\00A7'; font-size: .85em; vertical-align: text-top; display: block; margin-top: 0.05em; }
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover { visibility: visible; }
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link { color: #ba3925; text-decoration: none; }
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover { color: #a53221; }
+.imageblock, .literalblock, .listingblock, .verseblock, .videoblock { margin-bottom: 1.25em; }
+.admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-align: left; font-weight: bold; }
+.tableblock > caption { text-align: left; font-weight: bold; white-space: nowrap; overflow: visible; max-width: 0; }
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+.admonitionblock > table { border: 0; background: none; width: 100%; }
+.admonitionblock > table td.icon { text-align: center; width: 80px; }
+.admonitionblock > table td.icon img { max-width: none; }
+.admonitionblock > table td.icon .title { font-weight: bold; text-transform: uppercase; }
+.admonitionblock > table td.content { padding-left: 1.125em; padding-right: 1.25em; border-left: 1px solid #dddddd; color: #6f6f6f; }
+.admonitionblock > table td.content > :last-child > :last-child { margin-bottom: 0; }
+.exampleblock > .content { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 4px; border-radius: 4px; }
+.exampleblock > .content > :first-child { margin-top: 0; }
+.exampleblock > .content > :last-child { margin-bottom: 0; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6, .exampleblock > .content p { color: #333333; }
+.exampleblock > .content h1, .exampleblock > .content h2, .exampleblock > .content h3, .exampleblock > .content #toctitle, .sidebarblock.exampleblock > .content > .title, .exampleblock > .content h4, .exampleblock > .content h5, .exampleblock > .content h6 { line-height: 1; margin-bottom: 0.625em; }
+.exampleblock > .content h1.subheader, .exampleblock > .content h2.subheader, .exampleblock > .content h3.subheader, .exampleblock > .content .subheader#toctitle, .sidebarblock.exampleblock > .content > .subheader.title, .exampleblock > .content h4.subheader, .exampleblock > .content h5.subheader, .exampleblock > .content h6.subheader { line-height: 1.4; }
+.exampleblock.result > .content { -webkit-box-shadow: 0 1px 8px #d9d9d9; box-shadow: 0 1px 8px #d9d9d9; }
+.sidebarblock { border-style: solid; border-width: 1px; border-color: #d9d9d9; margin-bottom: 1.25em; padding: 1.25em; background: #f2f2f2; -webkit-border-radius: 4px; border-radius: 4px; }
+.sidebarblock > :first-child { margin-top: 0; }
+.sidebarblock > :last-child { margin-bottom: 0; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6, .sidebarblock p { color: #333333; }
+.sidebarblock h1, .sidebarblock h2, .sidebarblock h3, .sidebarblock #toctitle, .sidebarblock > .content > .title, .sidebarblock h4, .sidebarblock h5, .sidebarblock h6 { line-height: 1; margin-bottom: 0.625em; }
+.sidebarblock h1.subheader, .sidebarblock h2.subheader, .sidebarblock h3.subheader, .sidebarblock .subheader#toctitle, .sidebarblock > .content > .subheader.title, .sidebarblock h4.subheader, .sidebarblock h5.subheader, .sidebarblock h6.subheader { line-height: 1.4; }
+.sidebarblock > .content > .title { color: #7a2518; margin-top: 0; line-height: 1.6; }
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child { margin-bottom: 0; }
+.literalblock > .content pre, .listingblock > .content pre { background: none; border-width: 1px 0; border-style: dotted; border-color: #bfbfbf; -webkit-border-radius: 4px; border-radius: 4px; padding: 0.75em 0.75em 0.5em 0.75em; word-wrap: break-word; }
+.literalblock > .content pre.nowrap, .listingblock > .content pre.nowrap { overflow-x: auto; white-space: pre; word-wrap: normal; }
+.literalblock > .content pre > code, .listingblock > .content pre > code { display: block; }
+@media only screen { .literalblock > .content pre, .listingblock > .content pre { font-size: 0.8em; } }
+@media only screen and (min-width: 768px) { .literalblock > .content pre, .listingblock > .content pre { font-size: 0.9em; } }
+@media only screen and (min-width: 1280px) { .literalblock > .content pre, .listingblock > .content pre { font-size: 1em; } }
+.listingblock > .content { position: relative; }
+.listingblock:hover code[class*=" language-"]:before { text-transform: uppercase; font-size: 0.9em; color: #999; position: absolute; top: 0.375em; right: 0.375em; }
+.listingblock:hover code.asciidoc:before { content: "asciidoc"; }
+.listingblock:hover code.clojure:before { content: "clojure"; }
+.listingblock:hover code.css:before { content: "css"; }
+.listingblock:hover code.groovy:before { content: "groovy"; }
+.listingblock:hover code.html:before { content: "html"; }
+.listingblock:hover code.java:before { content: "java"; }
+.listingblock:hover code.javascript:before { content: "javascript"; }
+.listingblock:hover code.python:before { content: "python"; }
+.listingblock:hover code.ruby:before { content: "ruby"; }
+.listingblock:hover code.scss:before { content: "scss"; }
+.listingblock:hover code.xml:before { content: "xml"; }
+.listingblock:hover code.yaml:before { content: "yaml"; }
+.listingblock.terminal pre .command:before { content: attr(data-prompt); padding-right: 0.5em; color: #999; }
+.listingblock.terminal pre .command:not([data-prompt]):before { content: '$'; }
+table.pyhltable { border: 0; margin-bottom: 0; }
+table.pyhltable td { vertical-align: top; padding-top: 0; padding-bottom: 0; }
+table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
+.highlight.pygments .lineno, table.pyhltable td:not(.code) { color: #999; padding-left: 0; padding-right: .5em; border-right: 1px solid #dddddd; }
+.highlight.pygments .lineno { display: inline-block; margin-right: .25em; }
+table.pyhltable .linenodiv { background-color: transparent !important; padding-right: 0 !important; }
+.quoteblock { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+.quoteblock blockquote { margin: 0 0 1.25em 0; padding: 0 0 0.5625em 0; border: 0; }
+.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
+.quoteblock .attribution { margin-top: -.25em; padding-bottom: 0.5625em; font-size: inherit; color: #555555; }
+.quoteblock .attribution br { display: none; }
+.quoteblock .attribution cite { display: block; margin-bottom: 0.625em; }
+table thead th, table tfoot th { font-weight: bold; }
+table.tableblock.grid-all { border-collapse: separate; border-spacing: 1px; -webkit-border-radius: 4px; border-radius: 4px; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
+table.tableblock.frame-topbot, table.tableblock.frame-none { border-left: 0; border-right: 0; }
+table.tableblock.frame-sides, table.tableblock.frame-none { border-top: 0; border-bottom: 0; }
+table.tableblock td .paragraph:last-child p, table.tableblock td > p:last-child { margin-bottom: 0; }
+th.tableblock.halign-left, td.tableblock.halign-left { text-align: left; }
+th.tableblock.halign-right, td.tableblock.halign-right { text-align: right; }
+th.tableblock.halign-center, td.tableblock.halign-center { text-align: center; }
+th.tableblock.valign-top, td.tableblock.valign-top { vertical-align: top; }
+th.tableblock.valign-bottom, td.tableblock.valign-bottom { vertical-align: bottom; }
+th.tableblock.valign-middle, td.tableblock.valign-middle { vertical-align: middle; }
+p.tableblock.header { color: #222222; font-weight: bold; }
+td > div.verse { white-space: pre; }
+ol { margin-left: 1.75em; }
+ul li ol { margin-left: 1.5em; }
+dl dd { margin-left: 1.125em; }
+dl dd:last-child, dl dd:last-child > :last-child { margin-bottom: 0; }
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist { margin-bottom: 0.625em; }
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none { list-style-type: none; }
+ul.unstyled, ol.unnumbered, ul.checklist { margin-left: 0.625em; }
+ul.checklist li > p:first-child > i[class^="icon-check"]:first-child, ul.checklist li > p:first-child > input[type="checkbox"]:first-child { margin-right: 0.25em; }
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child { position: relative; top: 1px; }
+ul.inline { margin: 0 auto 0.625em auto; margin-left: -1.375em; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+ul.inline > li { list-style: none; float: left; margin-left: 1.375em; display: block; }
+ul.inline > li > * { display: block; }
+.unstyled dl dt { font-weight: normal; font-style: normal; }
+ol.arabic { list-style-type: decimal; }
+ol.decimal { list-style-type: decimal-leading-zero; }
+ol.loweralpha { list-style-type: lower-alpha; }
+ol.upperalpha { list-style-type: upper-alpha; }
+ol.lowerroman { list-style-type: lower-roman; }
+ol.upperroman { list-style-type: upper-roman; }
+ol.lowergreek { list-style-type: lower-greek; }
+.hdlist > table, .colist > table { border: 0; background: none; }
+.hdlist > table > tbody > tr, .colist > table > tbody > tr { background: none; }
+td.hdlist1 { padding-right: .8em; font-weight: bold; }
+td.hdlist1, td.hdlist2 { vertical-align: top; }
+.literalblock + .colist, .listingblock + .colist { margin-top: -0.5em; }
+.colist > table tr > td:first-of-type { padding: 0 .8em; line-height: 1; }
+.colist > table tr > td:last-of-type { padding: 0.25em 0; }
+.qanda > ol > li > p > em:only-child { color: #00467f; }
+.thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
+.imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
+.imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
+.imageblock > .title { margin-bottom: 0; }
+.imageblock.thumb, .imageblock.th { border-width: 6px; }
+.imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
+.image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
+.image.left { margin-right: 0.625em; }
+.image.right { margin-left: 0.625em; }
+a.image { text-decoration: none; }
+span.footnote, span.footnoteref { vertical-align: super; font-size: 0.875em; }
+span.footnote a, span.footnoteref a { text-decoration: none; }
+#footnotes { padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0.625em; }
+#footnotes hr { width: 20%; min-width: 6.25em; margin: -.25em 0 .75em 0; border-width: 1px 0 0 0; }
+#footnotes .footnote { padding: 0 0.375em; line-height: 1.3; font-size: 0.875em; margin-left: 1.2em; text-indent: -1.2em; margin-bottom: .2em; }
+#footnotes .footnote a:first-of-type { font-weight: bold; text-decoration: none; }
+#footnotes .footnote:last-of-type { margin-bottom: 0; }
+#content #footnotes { margin-top: -0.625em; margin-bottom: 0; padding: 0.75em 0; }
+.gist .file-data > table { border: none; background: #fff; width: 100%; margin-bottom: 0; }
+.gist .file-data > table td.line-data { width: 99%; }
+.erinaspecial {
+  font-weight: bold;
+}
+div.unbreakable { page-break-inside: avoid; }
+.big { font-size: larger; }
+.small { font-size: smaller; }
+.underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
+.aqua { color: #00bfbf; }
+.aqua-background { background-color: #00fafa; }
+.black { color: black; }
+.black-background { background-color: black; }
+.blue { color: #0000bf; }
+.blue-background { background-color: #0000fa; }
+.fuchsia { color: #bf00bf; }
+.fuchsia-background { background-color: #fa00fa; }
+.gray { color: #606060; }
+.gray-background { background-color: #7d7d7d; }
+.green { color: #006000; }
+.green-background { background-color: #007d00; }
+.lime { color: #00bf00; }
+.lime-background { background-color: #00fa00; }
+.maroon { color: #600000; }
+.maroon-background { background-color: #7d0000; }
+.navy { color: #000060; }
+.navy-background { background-color: #00007d; }
+.olive { color: #606000; }
+.olive-background { background-color: #7d7d00; }
+.purple { color: #600060; }
+.purple-background { background-color: #7d007d; }
+.red { color: #bf0000; }
+.red-background { background-color: #fa0000; }
+.silver { color: #909090; }
+.silver-background { background-color: #bcbcbc; }
+.teal { color: #006060; }
+.teal-background { background-color: #007d7d; }
+.white { color: #bfbfbf; }
+.white-background { background-color: #fafafa; }
+.yellow { color: #bfbf00; }
+.yellow-background { background-color: #fafa00; }
+span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
+.admonitionblock td.icon [class^="icon-"]:before { font-size: 2.5em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); cursor: default; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #005498; color: #003f72; }
+.admonitionblock td.icon .icon-tip:before { content: "\f0eb"; text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8); color: #111; }
+.admonitionblock td.icon .icon-warning:before { content: "\f071"; color: #bf6900; }
+.admonitionblock td.icon .icon-caution:before { content: "\f06d"; color: #bf3400; }
+.admonitionblock td.icon .icon-important:before { content: "\f06a"; color: #bf0000; }
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 20px; height: 20px; font-size: 12px; font-weight: bold; line-height: 20px; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -2px; letter-spacing: -1px; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.literalblock > .content > pre, .listingblock > .content > pre { -webkit-border-radius: 0; border-radius: 0; }
+
+
+/* custom style */
+.anwendungsfallkasten {
+display: flex;
+}
+
+.anwewndungsfallkastenitem {
+  flex-basis: auto;
+padding: 10px;
+}
+
+.anwendungs-user {
+  border: solid 1px #0000003b;
+border-radius: 5px;
+padding: 30px;
+box-shadow: 0px 2px 0px 0px #0000000d;
+font-size: 30px;
+height: 100%;
+}
+
+.anwendungs-auslöser {
+  border: solid 1px #0000003b;
+border-radius: 5px;
+padding: 30px;
+box-shadow: 0px 2px 0px 0px #0000000d;
+font-size: 15px;
+min-width: 370px;
+height: 100%;
+} 
+
+.anwendungs-vorbedingungen {
+  border: solid 1px #0000003b;
+border-radius: 5px;
+padding: 30px;
+box-shadow: 0px 2px 0px 0px #0000000d;
+font-size: 15px;
+height:100%;
+}
+</style>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+  <!-- Logo -->
+
+<div id="toc" class="toc2">
+  <!-- Inhaltsverzeichnis -->
+  <span class="image"><img src="https://i.imgur.com/zCnJW6l.png" alt="SPAsS"></span>
+<ul class="sectlevel1">
+<li><a href="#section-introduction-and-goals" class="erinaspecial">1. Projektgrundlagen</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_einführung">1.1. Einführung</a></li>
+<li><a href="#_ziele">1.2. Ziele</a></li>
+<li><a href="#_usecases">1.3. Anwendungsszenarios</a></li>
+<li><a href="#_team">1.4. Mitwirkende</a></li>
+</ul>
+</li>
+<li><a href="#section-architecture-constraints" class="erinaspecial">2. Rahmenbedingungen</a></li>
+<li>
+  <ul class="sectlevel2">
+  <li><a href="#_aadb">2.1. Anforderungen an die Benutzungsoberfläche</a></li>
+  <li><a href="#_ta">2.2. Technologische Anforderungen</a></li>
+  </ul>
+  </li>
+<li><a href="#anwendungsfallspec" class="erinaspecial">3. Anwendungsfälle</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_AA">3.1. Anwendungsfall A</a></li>
+<li><a href="#_AB">3.2. Anwendungsfall B</a></li>
+<li><a href="#_AC">3.3. Anwendungsfall C</a></li>
+<li><a href="#_AD">3.4. Anwendungsfall D</a></li>
+<li><a href="#_AE">3.5. Anwendungsfall E</a></li>
+<li><a href="#_AF">3.6. Anwendungsfall F</a></li>
+<li><a href="#_AG">3.7. Anwendungsfall G</a></li>
+<li><a href="#_flies">3.8. Fließtext Anwendungsfälle</a></li>
+</ul>
+</li>
+<li><a href="#section-solution-strategy" class="erinaspecial">4. Lösungsstrategie</a></li>
+<li>
+  <ul class="sectlevel2">
+  <li><a href="#_dm">4.1. Domänenmodell</a></li>
+  <li><a href="#_bs">4.2. Benutzungsschnittstelle</a></li>
+
+  </ul>
+  </li>
+<li><a href="#section-building-block-view" class="erinaspecial">5. Bausteinschicht</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#_whitebox_gesamtsystem">5.1. Whitebox Gesamtsystem</a></li>
+</ul>
+</li>
+<li><a href="#section-runtime-view" class="erinaspecial">6. Laufzeitsicht</a></li>
+<li>
+<ul class="sectlevel2">
+<li><a href="#__em_bezeichnung_laufzeitszenario_1_em">6.1. Sequenzdiagramm Stundenplan anzeigen</a></li>
+<li><a href="#__em_bezeichnung_laufzeitszenario_2_em">6.2. Observer: Modulliste filtern</em></a></li>
+<li><a href="#__em_bezeichnung_laufzeitszenario_3_em">6.3. User ruft auf dem Studienplan alle Module auf.</em></a></li>
+<li><a href="#__em_bezeichnung_laufzeitszenario_4_em">6.4. User bearbeitet Modul</em></a></li>
+</ul>
+</li>
+
+<li><a href="#section-glossary" class="erinaspecial">7. Glossar</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<style>
+.arc42help {font-size:small; width: 14px; height: 16px; overflow: hidden; position: absolute; right: 0; padding: 2px 0 3px 2px;}
+.arc42help::before {content: "?";}
+.arc42help:hover {width:auto; height: auto; z-index: 100; padding: 10px;}
+.arc42help:hover::before {content: "";}
+@media print {
+	.arc42help {display:none;}
+}
+</style>
+<div class="paragraph">
+  <h2 id="section-introduction-and-goals"><a class="anchor" href="#section-introduction-and-goals"></a>1. Projektgrundlagen</h2>
+<blockquote>Versionsnummer: 3</blockquote>
+</div>
+<div class="paragraph lead">
+  <h3 id="_einführung"><a class="anchor" href="#_ziele"></a>1.1 Einführung</h3>
+  <p>
+  Bei dem Projekt handelt es sich um einen inviduellen interaktiven Studienplaner (Kurz
+  SPAsS), für Studenten der Hochschule Rhein Main. In diesem Tool soll es möglich sein, für
+  den eigenen Studienverlauf einen Plan zu generieren,
+  der bestandene Module, Fortschrittsregelung und fachliche Abhängigkeiten
+  berücksichtigt.
+</p>
+</div>
+<div class="paragraph">
+<p>&#169;
+We acknowledge that this document uses material from the arc42 architecture template, <a href="https://arc42.org">https://arc42.org</a>.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ziele"><a class="anchor" href="#_ziele"></a>1.2. Ziele</h3>
+<ul>
+  <li>Eine grafische Benutzungsoberfläche, die Drag & Drop bearbeitung ermöglicht.<ul><li>Einheitliches Stylesheet / Design</li></ul></li>
+  <li>In dieser Benutzungsoberfläche sollen enthalten sein:<ul>
+    <li>Übersicht über den Studienfortschritt (Nicht-/bestandene Module farblich unterlegt)
+    sowie höhere Semester direkt sichtbar.</li>
+  <li>Mögliche Abhängigkeiten der Module sollen per Knopfdruck einsehbar sein.</li>
+  <li>Zu jedem Modul sollen außerdem Informationen gespeichert sein, wie
+    beispielsweise der Dozent, Raum, Fehlversuche und die Note.</li>
+    <li>Der aktuelle Notenschnitt soll ausgegeben werden.</li>
+    <li>Eine Wunschnotenschnitt soll eingetragen werden können, dann werden zu den
+      aktuell belegten Modulen Noten berechnet, welche erreicht werden müssen, um auf
+      diesen Wunschschnitt zu kommen.</li>
+  </ul></li>
+<li>Ausgabe eines übersichtlichen und lesbaren Studienplan als PDF</li>
+</ul>
+</div>
+<div class="sect2">
+  <h3 id="_usecases"><a class="anchor" href="#_usecases"></a>1.3. Anwendungsszenarios</h3>
+<ul>
+  <li>Benutzer kann einen eigenen Semesterplan für seinen Studiengang anlegen.</li>
+  <li>Möglichkeit vorgebene Module zu verändern, hinzuzufügen oder zu Löschen.</li>
+  <li>Aus den Studienabhängigen Modulen soll es möglich sein, sich einen Semesterplan zu erstellen.</li>
+  <li>Das Eintragen von Noten soll möglich sein.</li>
+  <li>Eine Notenschnitt Prognose für das aktuelle Semester soll (wenn gewünscht) möglich sein.</li>
+  <li>Es soll möglich sein, Modulabhängigkeiten direkt einzusehen.</li>
+  <li>Berstandene Module kann der User markieren.</li>
+</ul>
+
+<img src="https://i.imgur.com/pGDu4VB.png">
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="_team"><a class="anchor" href="#_team"></a>1.4. Mitwirkende</h3>
+
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Felix Ruf</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Timothy Doukhin</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Julia Honisch</em></p></td>
+</tr>
+<tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Erina Daraz</em></p></td>
+  </tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-architecture-constraints"><a class="anchor" href="#section-architecture-constraints"></a>2. Rahmenbedingungen</h2>
+<div class="sectionbody">
+
+
+<h3 id="_aadb"><a class="anchor" href="#_aadb"></a>2.1. Anforderungen an die Benutzungsoberfläche</h3>
+<div class="paragraph">
+<ul>
+<li>Reaktionsschnelle GUI</li>
+<li>Ästhetisches Design</li>  
+<li>Intuitive Benutzbarkeit</li>
+<li>Bedienung mit Maus und Tastatur</li>
+</ul>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_ta"><a class="anchor" href="#_ta"></a>2.2 Technologische Anforderungen</h3>
+<div class="paragraph">
+<p><strong>Software:</strong></p>
+<ul>
+<li>Java 17</li>
+<li>Gradle build- und testbar</li>
+<li>JavaFx-Desktop Anwendung</li>
+<li>Unter Linux ausführbar</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Hardware:</strong></p>
+<ul>
+  <li>Halbwegs moderner PC sollte reichen (HDD, RAM und CPU sollten vorhanden sein, sonst
+    ist die Ausführung dieses Programm nicht das größte Problem des Nutzers)</li>
+    <li>Auflösung mindestens Full-HD (1920 x 1080)</li>
+    <li>Farbmonitor mit mindestens sRGB-Farbraum</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Qualitätsanforderungen</strong></p>
+<ul>
+  <li>Usability</li>
+  <li>Ressourcenschonend(Nicht zu viel RAM zumüllen oder CPU-Last generieren)</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+
+<div class="sect1">
+
+  <!-- copy from here -->
+<h2 id="section-system-scope-and-context"><a class="anchor" href="#anwendungsfallspec"></a>3. Anwendungsfälle</h2>
+<div class="sectionbody">
+<div class="sect2">
+  <!-- Anwendungsfall HIER-->
+<h3 id="_AA"><a class="anchor" href="#_AA"></a>3.1. Anwendungsfall A</h3>
+<h4>Semesterplan erstellen</h4>
+<div class="paragraph">
+
+  <div class="anwendungsfallkasten">
+    <div class="anwewndungsfallkastenitem">
+      <div class="anwendungs-user">
+      <i class="fa-solid fa-user"></i>
+      <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+    </div>
+    </div>
+    <div class="anwewndungsfallkastenitem">
+      <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>Der Benutzer hat ein Studium belegt und möchte nun einen Semesterplan erstellen.</div>
+    </div>
+    <div class="anwewndungsfallkastenitem">
+      <div class="anwendungs-vorbedingungen">
+        <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+        Module für das Studium sind im System hinterlegt.
+        Studiengang ist erstellt.
+      </div>
+    </div>
+  </div>
+
+  <h5>Ablauf</h3>
+
+  <ol>
+    <li>System:<ul><li>Zeigt nur die äußere UI an, aber keinen Studienplan.</li></ul></li>
+    <li>Benutzer:<ul><li>Klickt auf Neuen Semesterplan erstellen</li></ul></li>
+    <li>System:<ul><li>Ein leerer Studienplan wird geöffnet und die Modulauswahl wird geöffnet.</li></ul></li>
+  </ol>
+
+  <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+  <p><strong>Der Studiengang befindet sich nicht im System. (Sonderfall)</strong></p>
+  <ol>
+    <li><strong>Benutzer:</strong> liest einen anderen bzw. neuen Studiengangplan ein, auß dem dann die
+      Module ausgelesen werden können.</li>
+      <li><strong>System</strong> fügt neuen Studiengang hinzu.
+        Standardablauf wird wiederholt.</li>
+  </ol>
+
+  <h5>Nachbedingung / Ergebnis</h5>
+  <p>In der Benutzeroberfläche werden als Ergebnis alle Abhängigkeiten des ausgewählten
+    Moduls angezeigt.</p>
+
+  <h5>Nicht-funktionale Anforderungen</h5>
+  <p>Reaktionsschnelle GUI</p>
+
+  <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+  <p>1-mal bei Erstbenutzung oder n-mal bei Studiengangwechsel.</p>
+
+</div>
+<hr>
+</div>
+
+<!-- until here -->
+<div class="sect2">
+
+
+<div class="sectionbody">
+
+  <div class="sect2">
+    <!-- Anwendungsfall HIER-->
+    <h3 id="_AB"><a class="anchor" href="#_AB"></a>3.2. Anwendungsfall B</h3>
+  <h4>Modulauswahl</h4>
+  <div class="paragraph">
+  
+    <div class="anwendungsfallkasten">
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-user">
+        <i class="fa-solid fa-user"></i>
+        <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+      </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>
+          Modulauswahl muss zum Beginn des Semesters getroffen werden</div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-vorbedingungen">
+          <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+          <ul>
+            <li>Verfügbare Module des Semesters sind in "Persistenz-Schicht"
+              eingerichtet und abrufbereit</li>
+              <li>Benutzer hat Wunschnotenschnitt im System hinterlegt</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  
+    <h5>Ablauf</h3>
+  
+    <ol>
+      <li>System:<ul><li>Zeigt belegbare, angebotene und noch nicht bestandene Module an</li></ul></li>
+      <li>Benutzer:<ul><li>Zieht per Drag & Drop Module in den Semesterplan</li></ul></li>
+      <li>System:<ul><li>System zeigt maximal erreichbare ECTS, Semesterwochenstunden und
+        benötigeten Notenschnitt für Wunschschnitt</li></ul></li>
+        <li>Benutzer:<ul><li>Bestätigt getätigte Auswahl für den Semesterplan</li></ul></li>
+        <li>System:<ul><li>Speichert Semesterplan ab</li></ul></li>
+    </ol>
+  
+    <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+    <p><strong>Wunschnotenschnitt wurde nicht eingetragen</strong></p>
+    <ol>
+        <li><strong>System</strong> gibt keinen benötigten Notenschnitt an</li>
+    </ol>
+    <p><strong>Wunschnotenschnitt ist nicht erreichbar</strong></p>
+    <ol>
+        <li><strong>System</strong> gibt Warnung aus</li>
+    </ol>
+    <p><strong>Es existiert bereits ein Semesterplan für das aktuelle Semester</strong></p>
+    <ol>
+        <li><strong>System</strong> fragt Benutzer ob der alte Plan überschrieben werden soll</li>
+        <li><strong>Benutzer</strong> bestätigt oder verwirft neuen Plan</li>
+        <li><strong>System</strong> Weiter bei 5 oder Abbruch der Modulauswahl</li>
+    </ol>
+    
+  
+    <h5>Nachbedingung / Ergebnis</h5>
+    <p>System geht zurück auf die Übersichtsseite</p>
+  
+    <h5>Nicht-funktionale Anforderungen</h5>
+    <p>Reaktionsschnelle GUI</p>
+  
+    <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+    <p>2x jährlich (zum Semesterbeginn)</p>
+  
+  </div>
+  <hr>
+  </div>
+
+  <div class="sect2">
+    <!-- Anwendungsfall C -->
+    <h3 id="_AC"><a class="anchor" href="#_AC"></a>3.3. Anwendungsfall C</h3>
+  <h4>Modulanpassung</h4>
+  <div class="paragraph">
+  
+    <div class="anwendungsfallkasten">
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-user">
+        <i class="fa-solid fa-user"></i>
+        <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+      </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>
+          Es werden jedes Jahr unterschiedliche Wahlpflichtmodule angeboten</div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-vorbedingungen">
+          <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+          <ul>
+            <li>Modul-Templates(Themenbereich und ECTS) sind im System hinterlegt</li>
+              <li>Benutzer kennt aktuell angebotene Wahlpflichtmodule durch Infoveranstaltung</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  
+    <h5>Ablauf</h3>
+  
+    <ol>
+      <li>System:<ul><li>Zeigt verschiedene Modul-Templates und "alte" Wahlpflichtmodule an</li></ul></li>
+      <li>Benutzer:<ul><li>Klickt auf veraltetes Modul oder Modul-Template</li></ul></li>
+      <li>System:<ul><li>System zeigt Modul / Modul-Template in Pop-Up-Fenster an</li></ul></li>
+        <li>Benutzer:<ul><li>Klickt auf bearbeiten</li></ul></li>
+        <li>System:<ul><li>Markiert bearbeitbare "Labels"</li></ul></li>
+        <li>Benutzer:<ul><li>Passt Namen, ETCS, Semesterwochenstunden, Beschreibung,
+          Veranstaltungen und die Prüfungsform an</li></ul></li>
+          <li>Benutzer:<ul><li>Bestätigt Bearbeitung</li></ul></li>
+        <li>System:<ul><li>Speichert Semesterplan ab</li></ul></li>
+    </ol>
+  
+    <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+    <p><strong>Name existiert bereits</strong></p>
+    <ol>
+        <li><strong>System</strong> gibt Fehlermeldung aus</li>
+        <li><strong>Benutzer</strong> passt Namen an</li>
+        <li>weiter bei 7</li>
+    </ol>
+    
+    
+  
+    <h5>Nachbedingung / Ergebnis</h5>
+    <p>System schließt Pop-Up-Fenster</p>
+  
+    <h5>Nicht-funktionale Anforderungen</h5>
+    <p>Reaktionsschnelle GUI</p>
+  
+    <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+    <p>1x vor dem 5. Semester, oder falls sich "normale"
+      Module verändern</p>
+  
+  </div>
+  <hr>
+  </div>
+
+  <div class="sect2">
+    <!-- Anwendungsfall D -->
+    <h3 id="_AD"><a class="anchor" href="#_AD"></a>3.4. Anwendungsfall D</h3>
+  <h4>Modulmanagement</h4>
+  <div class="paragraph">
+  
+    <div class="anwendungsfallkasten">
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-user">
+        <i class="fa-solid fa-user"></i>
+        <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+      </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>
+          Der Benutzer möchte ein Modul ändern.</div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-vorbedingungen">
+          <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+          Es wurde ein Semesterplan erstellt.
+
+        </div>
+      </div>
+    </div>
+  
+    <h5>Standardablauf [Bearbeiten]</h3>
+  
+    <ol>
+      <li>Benutzer:<ul><li>Öffnet die Modulauswahl</li></ul></li>
+      <li>System:<ul><li>Listete alle Module in der Modulauswahl auf.</li></ul></li>
+        <li>Benutzer:<ul><li>Klickt auf zu änderndes Modul</li></ul></li>
+        <li>System:<ul><li>Zeigt Modul und alle Details in Pop-Up-Fenster an</li></ul></li>
+        <li>Benutzer:<ul><li>Klickt auf das zu ändernde Feld</li></ul></li>
+          <li>System:<ul><li>Neuer Wert wird akzeptiert</li></ul></li>
+        <li>Benutzer:<ul><li>Drückt OK</li></ul></li>
+        <li>System:<ul><li>Fügt geändertes Modul hinzu</li></ul></li>
+    </ol>
+
+    <h5>Standardablauf [Löschen]</h3>
+  
+      <ol>
+        <li>Benutzer:<ul><li>Klickt auf zu löschendes Modul</li></ul></li>
+        <li>System:<ul><li>System zeigt Modul und alle Details in Pop-Up-Fenster an</li></ul></li>
+          <li>Benutzer:<ul><li>Klickt auf das Lösch-Icon</li></ul></li>
+          <li>System:<ul><li>Fragt erneut nach, ob das löschen wirklich durchgeführt werden sollte</li></ul></li>
+          <li>Benutzer:<ul><li>Bestätigt</li></ul></li>
+            <li>System:<ul><li>Löscht das Modul aus dem Semesterplan und graut es aus</li></ul></li>
+        
+      </ol>
+
+      <h5>Standardablauf [Hinzufügen]</h3>
+  
+        <ol>
+          <li>Benutzer:<ul><li>Klickt auf hinzufügendes Modul und zieht es in den Plan rein</li></ul></li>
+          <li>System:<ul><li>System zeigt Modul und alle Details in Pop-Up-Fenster an</li></ul></li>
+            <li>Benutzer:<ul><li>Klickt auf belegen</li></ul></li>
+            <li>System:<ul><li>Prüft, ob alle Anforderungen für das Modul erfüllt sind</li></ul></li>
+            <li>Benutzer:<ul><li>Drückt OK</li></ul></li>
+              <li>System:<ul><li>Fügt Modul hinzu, wenn alles erfüllt ist, wenn nicht, dann erscheint ein Pop-up
+                Fenster</li></ul></li>
+          
+        </ol>
+  
+    <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+  <p>-/-</p>
+    
+    
+  
+    <h5>Nachbedingung / Ergebnis</h5>
+    <ul>
+     <li>Modul wurde erfolgreich aktualisiert.</li>
+     <li>Modul wurde erfolgreich gelöscht.</li>
+     <li>Modul wurde erfolgreich hinzugefügt.</li>
+    </ul>
+  
+    <h5>Nicht-funktionale Anforderungen</h5>
+    <p>Reaktionsschnelle GUI</p>
+  
+    <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+    <p>Möglichkeit gegeben, den Plan jederzeit anzupassen</p>
+  
+  </div>
+  <hr>
+  </div>
+
+  <div style="page-break-after: always;"></div>
+  <div class="sect2">
+    <!-- Anwendungsfall E -->
+    <h3 id="_AE"><a class="anchor" href="#_AE"></a>3.5. Anwendungsfall E</h3>
+  <h4>Modulabhängigkeiten anzeigen</h4>
+  <div class="paragraph">
+    Der Benutzer kann sich die Modulabhängigkeiten auf zwei Ebenen anzeigen lassen.
+    <br><br>
+    <table class="tableblock frame-all grid-all" style="width:100%; ">
+      <colgroup>
+      <col style="width:50%;">
+      <col style="width:50%;">
+      </colgroup>
+      <thead>
+      <tr>
+      <th class="tableblock halign-left valign-top">Modulansichtsauswahl</th>
+      <th class="tableblock halign-left valign-top">Semesterplan</th>
+      </tr>
+      </thead>
+      <tbody>
+  
+      <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Die Modulansichtsauswahl sammelt in einem Container alle existierenden Module
+          für den ausgewählten Studiengang.</em></p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Der Semesterplan zeigt die Module an, die sich der User ausgewählt hat.</em></p></td>
+        </tr>
+      
+  
+      </tbody>
+      </table>
+<img src="https://i.imgur.com/cm7CloL.png">
+    <div class="anwendungsfallkasten">
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-user">
+        <i class="fa-solid fa-user"></i>
+        <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+      </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>
+          <ol>
+            <li>Der User wählt sich für das kommende Semester neue Module aus und möchte sehen,
+              ob seine bereits erlangte Erfahrung in bestandenen Modulen ihm helfen werden.</li>
+            <li>Der User überlegt sich im nächsten Semester ein Modul nicht zu belegen und möchte
+              sehen, ob die verlorene Erfahrung für andere Module zu einem Problem kommen
+              könnte.</li>
+          
+          </ol>
+        
+        </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-vorbedingungen">
+          <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+          <ul>
+            <li>User hat einen Studiengang in seine Modulauswahl geladen.</li>
+             
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  
+    <h5>Ablauf</h3>
+  <p>Da Modulansicht und Semesterplan zur selben Zeit geöffnet sein können, geschieht die
+    jeweilige Aktion im ausgewählten Container. (AND OR)</p>
+    <blockquote>Wenn in der Modulauswahl Abhängigkeiten für das Modul "Mathematik" hervorgehoben
+      werden, werden diese nicht im Semesterplan hervorgehoben. Es kann aber zeitgleich
+      auch im Semesterplan Abhängigkeiten von einem anderen Fach (oder demselben)
+      angezeigt werden - oder andersherum.</blockquote>
+    <ol>
+
+      <li>Benutzer:<ul><li>Öffnet (AND OR):<ol><li>Modulansicht</li><li>Semesterplan</li></ol></li></ul></li>
+      <li>System:<ul><li>Listet die Module auf.</li></ul></li>
+      <li>Benutzer:<ul><li>Macht einen Rechtsklick auf ein Modul</li></ul></li>
+      <li>System:<ul><li>UI zeigt Kontextmenü an.</li></ul></li>
+        <li>Benutzer:<ul><li>Wählt im Kontextmenü Abhängigkeiten anzeigen aus</li></ul></li>
+        <li>System:<ul><li><ul><li>UI blendet Module, die keine Abhängigkeiten haben, aus.</li><li>UI hebt Module, die Abhängigkeiten besitzen, hervor.</li></ul></li></ul></li>
+        <li>Benutzer:<ul><li>Macht einen Rechtsklick in die/den: (AND OR)<ol><li>Modulansicht</li><li>Semesterplan</li></ol></li></ul></li>
+          <li>System:<ul><li>UI zeigt Kontextmenü an.</li></ul></li>
+        <li>Benutzer:<ul><li>Wählt im Kontextmenü Abhängigkeiten nicht mehr anzeigen aus.</li></ul></li>
+        <li>System:<ul><li>UI setzt Semesterplan (AND OR) Modulansicht in den Normalzustand zurück.</li></ul></li>
+    </ol>
+  
+    <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+    <p><strong>Das gewünschte Modul besitzt keine Abhängigkeiten.</strong></p>
+    <ol>
+        <li><strong>System</strong> blendet alle Module aus.</li>
+        <li><strong>Benutzer</strong> macht einen Rechtsklick und wählt Abhängigkeiten nicht mehr anzeigen aus.
+          c. Standardablauf wirdfortegesetzt (10 a)</li>
+    </ol>
+    
+  
+    <h5>Nachbedingung / Ergebnis</h5>
+    <p>In der Benutzeroberfläche werden als Ergebnis alle Abhängigkeiten des ausgewählten
+      Moduls angezeigt.</p>
+  
+    <h5>Nicht-funktionale Anforderungen</h5>
+    <p>Reaktionsschnelle GUI</p>
+  
+    <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+    <p>n-mal während des gesamten Studiums.</p>
+  
+  </div>
+  <hr>
+  </div>
+
+
+  <div class="sect2">
+    <!-- Anwendungsfall D -->
+    <h3 id="_AF"><a class="anchor" href="#_AF"></a>3.6. Anwendungsfall F</h3>
+  <h4>Noten eintragen</h4>
+  <div class="paragraph">
+  
+    <div class="anwendungsfallkasten">
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-user">
+        <i class="fa-solid fa-user"></i>
+        <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+      </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>
+          Der Benutzer hat einige Module Schon belegt oder Gutgeschrieben
+Bekommen.</div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-vorbedingungen">
+          <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+<ul>
+  <li>Module sind im System hinterlegt</li>
+  <li>Benutzer kennt seine Noten zu den Modulen</li>
+</ul>
+        </div>
+      </div>
+    </div>
+  
+    <h5>Standardablauf</h3>
+  
+    <ol>
+      <li>System:<ul><li>Zeigt alle Module an</li></ul></li>
+      <li>Benutzer:<ul><li>Klickt auf Modul</li></ul></li>
+        <li>System:<ul><li>System zeigt Modul und alle Details in Pop-Up-Fenster an</li></ul></li>
+        <li>Benutzer:<ul><li>Klickt auf den Bereich Note.</li></ul></li>
+          <li>System:<ul><li>Auswahlfeld für Note wird highlighted (1.0-4.0)</li></ul></li>
+        <li>Benutzer:<ul><li>Gibt seine Note an</li></ul></li>
+        <li>Benutzer:<ul><li>Drückt OK</li></ul></li>
+        <li>System:<ul><li>Speichert Note ab</li></ul></li>
+        <strong>Selber Ablauf für das Praktikum</strong>
+    </ol>
+
+   
+  
+    <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+  <p>Nutzer gibt ausversehen im Falschen Modul seine Note ab -> Bei Note bearbeiten kann
+    man die Note wieder entfernen, bzw das Praktikum häkchen entfernen</p>
+    
+    
+  
+    <h5>Nachbedingung / Ergebnis</h5>
+   <p>Note ist gespeichert</p>
+  
+    <h5>Nicht-funktionale Anforderungen</h5>
+    <p>Reaktionsschnelle GUI</p>
+  
+    <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+    <p>Regelmäßig bei Ende eines Semesters, um seinen
+      Notenschnitt auszurechnen</p>
+  
+  </div>
+  <hr>
+  </div>
+
+  <div class="sect2">
+    <!-- Anwendungsfall G -->
+    <h3 id="_AG"><a class="anchor" href="#_AG"></a>3.7. Anwendungsfall G</h3>
+  <h4>Modulabhängigkeiten anzeigen</h4>
+  <div class="paragraph">
+    <blockquote>
+      Falls der Benutzer für seine bestandenen Module Noten eingetragen hat, gibt der Plan
+ihm automatisch einen aktuellen Notenschnitt aus. Im Beispiel hat der Benutzer einen
+Schnitt von 3,0.<br><br>
+Der User möchte sich in diesem Semester mehr anstrengen und trägt als Schnitt eine
+2,0 ein und belegt 5 Module im aktuellen Semester. Als Ausgabe bekommt der User die
+Antwort, das damit er auf einen Schnitt von 2,0 kommen kann, er in allen 5 Modulen
+eine 1,0 schreiben muss.
+    </blockquote>
+    <br><br>
+
+    <div class="anwendungsfallkasten">
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-user">
+        <i class="fa-solid fa-user"></i>
+        <div style="font-size: 13px;margin-top: 10px;margin-bottom: -10px;">User</div>
+      </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-auslöser "><h1 style="font-size: 16px;margin-top: 0;">Fachlicher Auslöser</h1>
+       <p>Der User fängt ein neues Semester an und hat seine bestandenen Module im
+        vergangenen Semester eingetragen und möchte seinen Schnitt für das neue Semester
+        verbessern.</p>
+        
+        </div>
+      </div>
+      <div class="anwewndungsfallkastenitem">
+        <div class="anwendungs-vorbedingungen">
+          <h1 style="font-size: 16px;margin-top: 0;">Vorbedingungen</h1>
+          <ul>
+            <li>Es sind bereits Noten für bestandene Module hinterlegt.</li>
+             <li>Der User hat unbenotete neue Module hinzugefügt.</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  
+    <h5>Ablauf</h3>
+
+    <ol>
+
+      <li>Benutzer:<ul><li>Wählt seinen aktuellen Studienplan aus.</li></ul></li>
+      <li>System:<ul><li>Zeigt aktuellen Studienplan an. Unter den Zusatzinformationen zu dem Studienplan
+        befindet sich der aktuelle Notenschnitt.</li></ul></li>
+      <li>Benutzer:<ul><li>Drückt auf den Knopf Notenschnitt Prognose.</li></ul></li>
+      <li>System:<ul><li>Gibt dem User ein Pop-Up Fenster, in dieser er die möglichkeit hat in ein Inputfeld
+        seinen gewünschen Notenschnitt einzutragen.</li></ul></li>
+        <li>Benutzer:<ul><li>Trägt einen Notenschnittwunsch in das Inputfeld ein.</li></ul></li>
+        <li>System:<ul><li>Berechnet anhand der bestehenden Noten, dem Wunsch und der anzahl der belegten
+          Module im aktuellen Semester, welche Noten der Benutzer im aktuellen Semester
+          schreiben muss, um auf seinen Wunschschnitt zu kommen und zeigt diese im
+          Anschluss an.</li></ul></li>        
+          <li>Benutzer:<ul><li>Speichet die Prognose.</li></ul></li>
+          <li>System:<ul><li>Speichet die Prognose.</li></ul></li>
+    </ol>
+  
+    <h5>Alternative Abläufe / Fehlersituationen / Sonderfälle</h5>
+    <p><strong>Gewünschte Note ist nicht erreichbar mit der anzahl der belegten Module</strong></p>
+    <ol>
+        <li><strong>System</strong> gibt Fehlermeldung aus.</li>
+        <li><strong>Benutzer</strong> Benutzer gibt einen anderen Notenschnitt ein
+          c. Standardablauf wirdfortegesetzt (6 a)</li>
+    </ol>
+    
+  
+    <h5>Nachbedingung / Ergebnis</h5>
+    <p>Das Sytem schließt das Pop-Up Fenster.</p>
+  
+    <h5>Nicht-funktionale Anforderungen</h5>
+    <p>Reaktionsschnelle GUI</p>
+  
+    <h5>Nutzungshäufigkeit / Mengengerüst</h5>
+    <p>n-mal nach auswahl der neuen Module.</p>
+  
+  </div>
+  <hr>
+  </div>
+
+  <div class="sect2">
+    <!-- Anwendungsfall D -->
+    <h3 id="_flies"><a class="anchor" href="#_flies"></a>3.8. Fließtext Anwendungsfälle</h3>
+    <h4>User Story "Note Eintragen"</h4>
+    <blockquote>
+      Der Benutzer Öffnet seinen Übersichtsplan, und da er Schon im 3. Fachsemester ist,
+möchte er Seine Noten für die Bereits bestandenen Module auswählen, welche er schon
+in seinen Semesterübersichtsplan gezogen hat. Hierfür klickt er auf das Gewünschte
+Modul und bearbeitet Rechts im Pop-Up das Auswahlfeld für "Note". Anschließend Setzt
+er einen Haken bei "Praktikum Bestanden". Dies wiederholt er für Alle Kurse, die er schon
+bestanden hat.
+    </blockquote>
+
+    <h4>Märchen vom User</h4>
+    <blockquote>
+      Es war einmal ein User, der das Glück hatte die ersten vier Semester des
+Medieninformatik Studiengangs an der Hochschule Rhein-Main, trotz der extrem hohen
+Anforderungen überstanden zu haben. Bis zu diesem Tag hatte ihm sein Studienplaner,
+der ihm von ein paar netten Kommilitonen zur Verfügung gestellt wurde immer treue
+Dienste erwiesen. Doch nun war es soweit, die Infoveranstaltung zu den
+Wahlpflichtmodulen hatte stattgefunden.
+Doch da die Professoren gar kein Mitleid mit dem armen User haben wollten,
+veränderten sie einfach nach Lust und Laune die angebotenen Wahlpflichtmodule. Nach
+dieser traumatisierenden Erfahrung kam es nun so wie es kommen musste. Der User
+stellte fest, dass keines der Wahlpflichtmodule aus seinem treuen, funktionalen sowie
+performanten Studienplaner mehr zu den angebotenen Veranstaltungen passen wollte.
+“Welch Unglück soll mich denn noch ereilen? Kennen diese Professoren denn gar kein
+Erbarmen?” schrie der User entmutigt in seinen Bildschirm.<br><br>
+...Die Fragen blieben unbeantwortet.<br><br>
+Doch eine kleine Stimme des Widerstandes regte sich in seinem Verstand. “Deine
+ehrenwerten Vorgänger und Bezwinger dieses chaotischen und anarchistischen
+Systems haben dir eine Waffe zum Überwinden aller Gemeinheiten des Regimes an die
+Hand gegeben. NUTZE SIE!” Und plötzlich wusste er was zu tun war. Natürlich hatten die
+genialen Entwickler seines treuen, funktionalen sowie performanten Studienplaners mit
+diesem listigen Zug der Herrscherkaste gerechnet und eine Möglichkeit vorgesehen,
+vorhandene Module zu bearbeiten oder gar ganz neue Module zu erstellen. Selbst
+vorgefertigte Modul-Templates, die nur kleinste Anpassungen brauchen wurden eingebaut. Mit neu gefasstem Mut wollte der User nun also das Modul “Mobile
+Computing” an die neuen Umstände anpassen. Dafür musste er nur auf das dem Zahn
+der Zeit zum Opfer gefallene Modul “Mobile Computing” klicken und in dem sich rasch
+öffnenden Pop-Up-Fenster die bearbeiten Funktion aktivieren. Nachdem er die ECTS
+verringert, die Semesterwochenstunden erhöht und die Prüfungsform erweitert hatte,
+speicherte er die so entstandene Monstrosität mit einem Lächeln auf den Lippen ab.
+Dieses Lächeln galt natürlich nicht dem Modul oder gar dem System, nein, er wusste
+wenn er diese Schikanen mit seinem treuen, funktionalen sowie performanten
+Studienplaner überstehen konnte dann konnte er alles schaffen. Vielleicht ja sogar das
+Regime stürzen, wie es seine ach so genialen Vorgänger schon vor ihm taten. Und wenn
+er nicht verzweifelt ist
+    </blockquote>
+
+    <h4>User Story "Modulabhängigkeiten anzeigen"</h4>
+    <blockquote>
+      Für den Benutzer hat das neue Semester begonnen und dieser ist gerade dabei sich
+      Module für die kommenden Monate auszusuchen. Er ist neugierig und würde gerne
+      wissen, ob von seinen bereits bestandenen Modulen, welche dabei sind, die ihm für das
+      nächste Semester weiterhelfen. So macht er einen Rechtsklick auf das Modul
+      Computergrafik und wählt dort im Menü den Punkt Abhängigkeiten anzeigen aus.
+      Danach stellt er fest, dass ihm tatsächlich Lineare Algebra und Programmieren 3 für
+      dieses Modul helfen werden. Er ist glücklich, diese Module letztes Semester belegt zu
+      haben und freut sich sich darauf, seine Erfahrung in Computergrafik anwenden zu
+      können.
+    </blockquote>
+
+  </div>
+
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="section-solution-strategy"><a class="anchor" href="#section-solution-strategy"></a>4. Lösungsstrategie</h2>
+<div class="sectionbody">
+  <h3 id="_dm"><a class="anchor" href="#_dm"></a>4.1. Domänenmodell</h3>
+<img src="https://i.imgur.com/eoK3s9L.png">
+<div style="page-break-after: always;"></div>
+<h3 id="_bs"><a class="anchor" href="#_bs"></a>4.2. Benutzungsschnittstelle</h3>
+<img src="https://i.imgur.com/0IO8ZjL.png">
+<img src="https://i.imgur.com/FX6U9P7.png">
+<img src="https://i.imgur.com/13VohI1.png">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect1">
+<h2 id="section-building-block-view"><a class="anchor" href="#section-building-block-view"></a>5. Bausteinsicht</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_whitebox_gesamtsystem"><a class="anchor" href="#_whitebox_gesamtsystem"></a>5.1. Whitebox Gesamtsystem</h3>
+<div class="paragraph">
+<img src="https://i.imgur.com/hlpOscV.png">
+</div>
+<div class="dlist">
+<dl>
+
+
+<dd>
+  <dt class="hdlist1">Erläuterung</dt>
+<dd>
+<p>
+  Der Studienplaner SPAsS ist nach den Regeln des MVC aufgebaut. Wir besitzen unsere MainView, welche aufgerufene Sub-Szenen initalisiert und managed.
+  MainView, sowie die unteren Sub-Szenen greifen auf die Controller zu, welche wiederum auf unsere Daten zugreifen. 
+  <br><br>
+  Die MainView ist die äußere Komponente unserer GUI. In dieser wird ein neuer Studienplan erstellt oder ein bestehender eingeladen. Diese kann auf alle Sub-Szenen zugreifen, beispielsweise wird die Sub-Szene ModulListView dann geöffnet, wenn der User sich in der MainView per Mausclick alle Module zu seinem Semesterplan anzeigen lassen möchte. Die MainView hält also die initialisation eines Studienplans, sowie das Kontextmenü der Application und ruft je nach User eingabe die Sub-Szenen auf. Ausnahme ist hier die PlanView, welche permanent nach aufrufen eines Studienplanes angezeigt wird. 
+<br><br>
+Wie das aussehen könnte, kann man sich im Abschnitt <a style="color: #6a17ce;text-decoration: underline;" href="#_bs">4.2. Benutzungsschnittstelle</a> anschauen.  
+<br><br>
+Die PlanView enthält den eigentlichen Stundenplan, es greift auf die Klasse StundenplanVerwaltung zu,
+welche den Stundenplan beinhaltet (Ausgewählte Module des Users), enthalten sowie eine semZahl (Wie viele Semester werden im Plan angezeigt) und das stundenplanLayout (Anordnungsfilter der Module).
+Die Klasse implementiert außerdem das Stundenplan Interface, welches im PlanController neue Module hinzufügen und entfernen kann.
+<br><br>
+Die SubSzene ModulListView ist dafür da, dass alle Module des Studiengangs angezeigt werden können.
+Die View greift auf die ModulListe zu, welche alle existierenden Module beinhält. Diese Klasse, kann die einzelnen Module filtern.
+Einzelnen Module beinhalten:
+
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+  <colgroup>
+  <col style="width:33%;">
+  <col style="width:66%;"> 
+  </colgroup>
+
+  <tbody>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Lehrveranstaltung</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Ist eine Lehrveranstaltung(Objekt) Liste, da ein Modul mehrere Lehrveranstaltungen haben kann.</p></td>
+  </tr>
+  <tr>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+  <td class="tableblock halign-left valign-top"><p class="tableblock">Name des Moduls</p></td>
+  </tr>
+  <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">CP</p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Erreichbare Credit Points des Modules. Kombiniert aus den einzelnen CP der Lehrveranstaltung</p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Entweder 0 oder eingetragene Note</p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Fachsemester</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Das vorhergesehene Fachsemester in welcher das Modul beelegt werden sollte.</p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Bestanden</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Setzt sich aus der Note der LehrVeranst zusammen. Falls 4,0 oder besser = bestanden</p></td>
+    </tr>
+  </tbody>
+  </table>
+
+  Wie oben beschrieben besitzt das Modul eine Liste der <b>Lehrveranstaltungen</b>, diese sind wie folgt beschrieben:
+
+  <table class="tableblock frame-all grid-all" style="width:100%; ">
+    <colgroup>
+    <col style="width:33%;">
+    <col style="width:66%;"> 
+    </colgroup>
+  
+    <tbody>
+    <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Name der Lehrveranstaltung</p></td>
+    </tr>
+    <tr>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">lvNr</p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">Nummer der Lehrveranstaltung</p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Note</p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock">Double Wert für die Note</p></td>
+      </tr>
+      <tr>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">Dozent</p></td>
+        <td class="tableblock halign-left valign-top"><p class="tableblock">Name des Dozenten</p></td>
+      </tr>
+    </tbody>
+    </table>
+
+Das ModulEditView ist dazu da, die einzelnen Module verwalten zu können.
+Dazu zählt das bearbeiten, das löschen und das hinzufügen. Dieses greift auch auf die ModulListe zu, hat also alle Informationen der vorhandene Module. 
+Dementsprechend kann dadurch von der ModulListe das aufgerufene Modul bearbeitet, löscht oder hinzufügt. (Der Unique Key ist dabei der Name des Modules) 
+
+
+</p>
+</dd>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect1">
+<h2 id="section-runtime-view"><a class="anchor" href="#section-runtime-view"></a>6. Laufzeitsicht</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="__em_bezeichnung_laufzeitszenario_1_em"><a class="anchor" href="#__em_bezeichnung_laufzeitszenario_1_em"></a>6.1. Sequenzdiagramm Stundenplan anzeigen</em></h3>
+<img src="https://i.imgur.com/l8qbYU9.png">
+<p>
+  <strong>Erläuterung</strong><br><br>
+  Das Programm wird gestartet, in der MainView wird die PlanView über set(Sub)Scene aufgerufen.<br>Diese fragt den Stundenplan über die StundenplanVerwaltung ab.<br>
+  Gibt es zurück an unsere PlanView, welche den Stundenplan dann anzeigt. 
+</p>
+
+</div>
+<div class="sect2">
+<h3 id="__em_bezeichnung_laufzeitszenario_2_em"><a class="anchor" href="#__em_bezeichnung_laufzeitszenario_2_em"></a>6.2. Observer: Modulliste filtern</h3>
+<div class="paragraph">
+<img src="https://i.imgur.com/y7c7kbY.png">
+<p>
+<strong>Erläuterung</strong><br><br>
+In der ModulListView lassen sich die Module über einen Eingabestring filtern.
+Nach der Eingabe des Strings wird die Filtermethode der ModulListe aufgerufen.
+ModulListe aktualisiert sich, teilt dies dem ModulListeObserver mit und dieser kann sich anschließend die aktualisierte ModulListe abrufen und anzeigen.
+
+</p>
+</div>
+</div>
+
+<div class="sect2">
+  <h3 id="__em_bezeichnung_laufzeitszenario_3_em"><a class="anchor" href="#__em_bezeichnung_laufzeitszenario_3_em"></a>6.3. User ruft auf dem Studienplan alle Module auf.</h3>
+  <div class="paragraph">
+  <img src="https://i.imgur.com/WrfxXO7.png">
+  <p>
+  <strong>Erläuterung</strong><br><br>
+  Das Programm wird gestartet, in der MainView wird die PlanView über set(Sub)Scene aufgerufen.
+  Diese fragt den Stundenplan über die StundenplanVerwaltung ab.
+  Gibt es zurück an unsere PlanView, welche den Stundenplan dann anzeigt. 
+  Der User öffnet nun die Modul Liste (ModulListView) und bekommt alle verfügbaren Module angezeigt.
+</p>
+</div>
+</div>
+
+
+<div class="sect2">
+  <h3 id="__em_bezeichnung_laufzeitszenario_4_em"><a class="anchor" href="#__em_bezeichnung_laufzeitszenario_4_em"></a>6.4. User bearbeitet Modul</h3>
+  <div class="paragraph">
+  <img src="https://i.imgur.com/021Vghe.png">
+  <p>
+  <strong>Erläuterung</strong><br><br>
+Der User hat die ModulListView geöffnet und möchte dort nun ein Modul bearbeiten.
+Er klickt auf das Modul, dann öffnet sich ein Bearbeitungsfenster(Popup). Der User macht seine Eingaben und klickt
+dann auf speichern. Jetzt wird der ModulController aufgerufen, welcher die bearbeitung mit der editModul() funktion durchführt. 
+ModulListe aktualisiert sich, teilt dies dem ModulListeObserver mit und dieser kann sich anschließend die aktualisierte ModulListe abrufen und anzeigen. 
+ Die Änderung wird dann in der ModulListView angezeigt. 
+</p>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="sect1">
+<h2 id="section-glossary"><a class="anchor" href="#section-glossary"></a>12. Glossar</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:33%;">
+<col style="width:66%;"> 
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Begriff</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UX – User Experience</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das zu deutsch „Nutzererlebnis“ umschreibt alle Wahrnehmungen und Emotionen eines Nutzers in Bezug auf ein Produkt oder eine Anwendung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eine gute Usability bedeutet, dass der User findet, was er sucht und das möglichst schnell und einfach. Im Einzelnen bedeutet das:
+  <ul>
+    <li>das Produkt/die Anwendung ist nützlich und bietet etwas, was der User braucht</li>
+    <li>der User erkennt schnell die Funktionsweisen und kann sie sich einprägen</li>
+    <li>der User versteht den inhaltlichen Aufbau und findet, was er sucht</li>
+    <li>der User braucht wenig Zeit und Energie um sein Ziel zu erreichen</li>
+    <li>der Gebrauch ist einfach und macht bestenfalls Spaß</li>
+  </ul>
+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UI – User Interface (Design)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ein User Interface ist die Benutzeroberfläche einer digitalen Anwendung, z. B. einer App oder Webseite. Im UI Design wird die Gestaltung der Benutzeroberfläche definiert. Ein gutes User Interface ist im Idealfall selbsterklärend und gibt nur kleine, notwendige Hilfestellungen in menschlicher Sprache.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komponenten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komponenten sind Teil-Elemente des UIs. Das können z. B. einzelne Buttons oder das gesamte Main Menu oder das Sidebar Menü sein. Die Komponenten zeigen die verschiedenen Status an, die das Element hat: z. B. Default, Hover und/oder Active.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UI Element</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ein UI Element ist ein einzelnes Element der Benutzeroberfläche, z. B. ein Button, Eingabefeld oder eine Checkbox</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modul</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ein Modul ist eine UI Komponente, die den Semesterplan füllt, und Daten über die jeweilige Lehrveranstaltung Enthält, kann per Drag and Drop in den Plan integriert werden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drag and Drop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die möglichkeit, eine UI-Komponente mit der Maus an eine Andere Stelle der UI zu ziehen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fortschrittsregelung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jede Lehrveranstaltung hat ein Empfohlenes Fachsemester n. Um ein Modul zu belegen, muss man alle Module Bestanden haben, die für das n-3 Fachsemester bestimmt sind, also im 4. alle aus dem 1. Bestanden haben.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stylesheet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das einheitliche aussehen der Anwendung und ihrer Komponenten wird über ein Stylesheet definiert / festgelegt.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-06-16 12:36
+</div>
+</div>
+<script src="https://kit.fontawesome.com/344a582201.js" crossorigin="anonymous"></script>
+</body>
+</html>
