@@ -18,7 +18,7 @@ Bei dem Projekt handelt es sich um einen inviduellen interaktiven Studienplaner 
 ![](https://i.imgur.com/N7G8l30.png)
 
 
-## Unterstütz 
+## Unterstützt
 
 Linux, Windows, Mac
 
