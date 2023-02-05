@@ -1,3 +1,5 @@
+## Studyplan (SPAsS)
+
 Bei dem Projekt handelt es sich um einen inviduellen interaktiven Studienplaner (Kurz SPAsS), für Studenten der Hochschule Rhein Main. In diesem Tool soll es möglich sein, für den eigenen Studienverlauf einen Plan zu generieren, der bestandene Module, Fortschrittsregelung und fachliche Abhängigkeiten berücksichtigt.
 
 ## Autoren
