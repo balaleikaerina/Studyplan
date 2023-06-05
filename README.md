@@ -4,8 +4,7 @@ Bei dem Projekt handelt es sich um einen inviduellen interaktiven Studienplaner 
 
 ## Autoren
 
-- [@Erina Daraz](https://www.github.com/erinadaraz)
-- [@Felix Ruf](https://www.github.com/MalibusParty)
+
 
 
 ## Documentation
