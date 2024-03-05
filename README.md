@@ -1,10 +1,9 @@
 ## Studyplan (SPAsS)
 
-Bei dem Projekt handelt es sich um einen inviduellen interaktiven Studienplaner (Kurz SPAsS), für Studenten der Hochschule Rhein Main. In diesem Tool soll es möglich sein, für den eigenen Studienverlauf einen Plan zu generieren, der bestandene Module, Fortschrittsregelung und fachliche Abhängigkeiten berücksichtigt.
+The project is an interactive study planner (SPAsS for short) for students at Rhein Main University of Applied Sciences. In this tool, it should be possible to generate a studyplan for one's own course of studies that takes into account modules passed, progress regulation and subject dependencies.
 
 ## Autoren
-
-
+- Erina Daraz, Alex Müller, Felix 
 
 
 ## Documentation
@@ -17,7 +16,7 @@ Bei dem Projekt handelt es sich um einen inviduellen interaktiven Studienplaner 
 ![](https://i.imgur.com/N7G8l30.png)
 
 
-## Unterstützt
+## Runs on
 
 Linux, Windows, Mac
 
@@ -25,8 +24,6 @@ Linux, Windows, Mac
 
 ## Deployment
 
-Dependency Management wird von Gradle übernommen.
-Zum ausführen in der Shell:
 
 ```bash
   ./gradlew run
